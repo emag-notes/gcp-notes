@@ -21,6 +21,13 @@ https://cloud.google.com/sql/docs/postgres/connect-admin-proxy?hl=ja
 
 うまくいかんかった。。
 
+## 外部アプリケーションから Cloud SQL に接続する
+
+https://cloud.google.com/sql/docs/postgres/connect-external-app?hl=ja
+
+* https://github.com/GoogleCloudPlatform/cloud-sql-jdbc-socket-factory/tree/1.0.5/examples/postgres/compute-engine
+  * ローカル環境でそのまま実行すると `The Application Default Credentials are not available. ...` となるので、 `gcloud auth application-default login` を実行すること
+
 ## 参考
 
 * 外部アプリケーションのための接続オプション
@@ -37,6 +44,9 @@ https://cloud.google.com/sql/docs/postgres/connect-admin-proxy?hl=ja
 
 ### あとで調べる
 
+* IAM 周り
+  * デフォルトアプリケーションの設定
+    * `gcloud auth application-default login`
 * Whitelisting your IP for incoming connection for 5 minutes...|
   * これを短くする方法
     * たぶん最初から IP アドレス追加しておけばよさそう?
