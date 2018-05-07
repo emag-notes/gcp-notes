@@ -2,10 +2,28 @@
 
 ## コンフィグ
 
-### 設定されたプロジェクトの出力
+### デフォルトプロジェクトの設定
+
+``` bash
+gcloud config set project [PROJECT_ID]
+```
+
+### デフォルトに設定されたプロジェクトの出力
 
 ``` bash
 gcloud config list project --format "value(core.project)"
+```
+
+### デフォルトのコンピューティング ゾーンの設定
+
+``` bash
+gcloud config set compute/zone [COMPUTE_ZONE]
+```
+
+`asia-northeast1-a` に設定
+
+``` bash
+gcloud config set compute/zone asia-northeast1-a
 ```
 
 ## サービス
