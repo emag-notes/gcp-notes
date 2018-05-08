@@ -26,6 +26,20 @@ gcloud config set compute/zone [COMPUTE_ZONE]
 gcloud config set compute/zone asia-northeast1-a
 ```
 
+## GCS
+
+### バケットの IAM 確認
+
+``` bash
+gsutil iam get gs://<バケット名>
+```
+
+### バケットの IAM にサービスアカウントを追加
+
+``` bash
+gsutil iam ch serviceAccount:<サービスアカウント名>>:legacyObjectReader gs://<バケット名>
+```
+
 ## サービス
 
 ### 利用可能サービス一覧
